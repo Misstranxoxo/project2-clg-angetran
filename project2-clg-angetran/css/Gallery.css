@@ -4,11 +4,11 @@
   box-sizing: border-box;
   list-style-type: none; /* Styled in normalize.css */
   text-decoration: none;
-  color: #ccc;
+  color: white;
 }
 
 body{
-  background-color: black;
+  background-color: transparent;
 }
 
 .wrapper{
@@ -96,7 +96,7 @@ body{
   letter-spacing: .18rem;
   margin-bottom: 1.5rem;
    margin-top: 4rem;
-  text-align: center;
+  text-align: right;
   text-transform: uppercase;
 }
 
@@ -123,7 +123,7 @@ body{
 .main-nav-list ul{
   position: absolute;
   top: -30%;
-  left: 50%;
+  left: -50%;
   transform: translate(-50%,-50%);
   transition-duration: 300ms;
   transition-timing-function: ease-in-out;
@@ -136,7 +136,7 @@ body{
   letter-spacing: 3px;
   margin-bottom: 15px;
   opacity: 0;
-  text-align: center;
+  text-align: right;
   text-transform: uppercase;
   transition-delay: 130ms;
 }
@@ -172,7 +172,8 @@ body{
 /*     transition-duration: 1000ms; */
 }
 .main-nav-list.active ul{
-  top: 50%;
+  top: 15%;
+  left: 10%;
   transform: translate(-50%,-50%);
   transition-delay: 560ms;
   transition-duration: 240ms;
@@ -188,7 +189,7 @@ body{
 /*** Just getting silly now ***************************/
 .wrapper.active p{
    color: black;
-             transition-delay: 150ms;
+  transition-delay: 150ms;
    transition-duration: 350ms;
 }
 
@@ -218,7 +219,7 @@ body{
 }
 
 .image-box{
-  height: 800px;
+  height: 600px;
   overflow: hidden;
 }
 
@@ -279,11 +280,11 @@ body{
 
 .image-box .img{
   transform: scale(1.5);
-  transition: 1.2s cubic-bezier(0.17, 0.97, 0.38, 1);
+  transition: 2.2s cubic-bezier(0.17, 0.97, 0.38, 1);
 }
 
 .image-box.revealed .img{
-  transform: scale(1.5);
+  transform: scale(2.5);
 }
 
 @media only screen and (max-width: 768px) {
