@@ -1,15 +1,20 @@
-// toggle menu
-var menuToggle = document.querySelector("#menu-toggle");
-var activeElements = document.querySelectorAll(".active-element");
-var toggledMenu = menuToggle.addEventListener("click", function(){
-     // forEach is not supported in IE11
-  // activeElements.forEach(function(e){
-  //     e.classList.toggle("active");
-  // });
-     for(var activated = 0; activated < activeElements.length; activated++){
-          activeElements[activated].classList.toggle("active");
-     }
-})
+// When the user scrolls the page, execute myFunction
+window.onscroll = function() {myFunction()};
+
+// Get the navbar
+var navbar = document.getElementById("navbar");
+
+// Get the offset position of the navbar
+var sticky = navbar.offsetTop;
+
+// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
 
 // JS for gallery images and text scroll
 const revealElements = document.querySelectorAll("[data-reveal]");
