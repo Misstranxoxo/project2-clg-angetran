@@ -1,9 +1,9 @@
 document.getElementById('resturantForm').addEventListener('submit', addResturant);
 
 // initial array of events, reading from localStorage
-const resturants = JSON.parse(localStorage.getItem('resturant')) || [];
+const resturants = JSON.parse(localStorage.getItem('resturants')) || [];
 
-function addResturants(e){
+function addResturant(e){
     e.preventDefault();
 
     // get type, name, date, and amount
