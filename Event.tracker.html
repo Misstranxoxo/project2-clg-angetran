@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Expense Tracker App</title>
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web&display=swap" 
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/Event.tracker.css">
+</head>
+<body>
+    <header>
+        <h1 class="title">Resturant Tracker App</h1>
+    <header>
+
+    <section class="content">
+        <h3 class="secondTitle">Add a new entry: </h3>
+        <div class="form">
+            <form id="resturantForm">
+                <div class="formLine left">
+                    <span for="Alphabet">Alphabet:</span>
+                    <select id="Alphabet">
+                        <option value="chooseOne">Choose one...</option>
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                        <option value="D">D</option>
+                    </select>
+                </div>
+                <div class="formLine right">
+                    <span for="Country">Country of Origin:</span>
+                    <input type="text" id="Country">
+                </div>
+
+                <div class="formLine left">
+                    <span for="date">Date:</span>
+                    <input type="date" id="date">
+                </div>
+                <div class="formLine right">
+                    <span for="Resturant">Resturant:</span>
+                    <input type="text" id="Resturant">
+                </div>
+                <button type="submit" class="buttonSave">Add a new event</button>
+            </form>
+        </div>
+    </section>
+    <section class="content">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Alphabet</th>
+                    <th>Country of Origin</th>
+                    <th>Date</th>
+                    <th>Resturant</th>
+                    <th>Option</th>
+                </tr>
+            </thead>
+            <tbody id="resturantTable">
+
+            </tbody>
+        </table>
+    </section>
+    <script src="js/Event.tracker.js"></script>
+</body>
+</html>
