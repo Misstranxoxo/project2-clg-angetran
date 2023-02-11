@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Expense Tracker App</title>
+    <title>Resturant Tracker App</title>
     <link href="https://fonts.googleapis.com/css?family=Titillium+Web&display=swap" 
         rel="stylesheet">
     <link rel="stylesheet" href="./css/Event.tracker.css">
@@ -15,22 +15,45 @@
     <header>
 
     <section class="content">
+    <h3 <a href="./Index.html">Home Page</a></h3>
         <h3 class="secondTitle">Add a new entry: </h3>
         <div class="form">
-            <form id="resturantForm">
+            <form id="venueForm">
                 <div class="formLine left">
-                    <span for="Alphabet">Alphabet:</span>
-                    <select id="Alphabet">
+                    <span for="alphabet">Alphabet:</span>
+                    <select id="alphabet">
                         <option value="chooseOne">Choose one...</option>
                         <option value="A">A</option>
                         <option value="B">B</option>
                         <option value="C">C</option>
                         <option value="D">D</option>
+                        <option value="E">E</option>
+                        <option value="F">F</option>
+                        <option value="G">G</option>
+                        <option value="H">H</option>
+                        <option value="I">I</option>
+                        <option value="J">J</option>
+                        <option value="K">K</option>
+                        <option value="L">L</option>
+                        <option value="M">M</option>
+                        <option value="N">N</option>
+                        <option value="O">O</option>
+                        <option value="P">P</option>
+                        <option value="Q">Q</option>
+                        <option value="R">R</option>
+                        <option value="S">S</option>
+                        <option value="T">T</option>
+                        <option value="U">U</option>
+                        <option value="V">V</option>
+                        <option value="W">W</option>
+                        <option value="Y">Y</option>
+                        <option value="Z">Z</option>
+                        
                     </select>
                 </div>
                 <div class="formLine right">
-                    <span for="Country">Country of Origin:</span>
-                    <input type="text" id="Country">
+                    <span for="country"> Country of Origin:</span>
+                    <input type="text" id="country">
                 </div>
 
                 <div class="formLine left">
@@ -38,10 +61,10 @@
                     <input type="date" id="date">
                 </div>
                 <div class="formLine right">
-                    <span for="Resturant">Resturant:</span>
-                    <input type="text" id="Resturant">
+                    <span for="resturant">Resturant:</span>
+                    <input type="text" id="resturant">
                 </div>
-                <button type="submit" class="buttonSave">Add a new event</button>
+                <button type="submit" class="buttonSave">Add a new resturant</button>
             </form>
         </div>
     </section>
@@ -56,7 +79,7 @@
                     <th>Option</th>
                 </tr>
             </thead>
-            <tbody id="resturantTable">
+            <tbody id="venueTable">
 
             </tbody>
         </table>

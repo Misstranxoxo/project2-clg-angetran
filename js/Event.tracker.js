@@ -1,68 +1,68 @@
-document.getElementById('resturantForm').addEventListener('submit', addResturant);
+document.getElementById('venueForm').addEventListener('submit', addVenue);
 
 // initial array of events, reading from localStorage
-const resturants = JSON.parse(localStorage.getItem('resturants')) || [];
+const venues = JSON.parse(localStorage.getItem('venues')) || [];
 
-function addResturant(e){
+function addVenue(e){
     e.preventDefault();
 
     // get type, name, date, and amount
-    let type = document.getElementById('alphabet').value;
-    let name = document.getElementById('country').value;
+    let alphabet = document.getElementById('alphabet').value;
+    let country = document.getElementById('country').value;
     let date = document.getElementById('date').value;
-    let amount = document.getElementById('resturant').value;
+    let resturant = document.getElementById('resturant').value;
 
-    if(type != 'chooseOne' 
-        && name.length > 0 
+    if(alphabet != 'chooseOne' 
+        && country.length > 0 
         && date != 0 
-        && resturant > 0){
-        const resturants = {
+        && resturant.length > 0){
+        const venue = {
             alphabet, 
             country, 
             date,
             resturant, 
-            id: resturants.length > 0 ? resturants[resturants.length - 1].id + 1 : 1,
+            id: venues.length > 0 ? venues [venues.length - 1].id + 1 : 1,
         }
 
-        resturants.push(resturants);
+        venues.push(venue);
         // localStorage 
-        localStorage.setItem('resturants', JSON.stringify(resturants));
+        localStorage.setItem('venues', JSON.stringify(venues));
     }
 
-    document.getElementById('resturantForm').reset();
-    showRestuarnt();
+    document.getElementById('venueForm').reset();
+    showVenues();
 }
 
-const showResturant = () => {
+const showVenues = () => {
 
-    const resturantTable = document.getElementById('resturantTable');
+    const venueTable = document.getElementById('venueTable');
 
-    resturantTable.innerHTML = '';
+    venueTable.innerHTML = '';
 
-    for(let i = 0; i < resturants.length; i++){
-        eventTable.innerHTML += `
+    for(let i = 0; i < venues.length; i++){
+        venueTable.innerHTML += `
             <tr>
-                <td>${resturants[i].alphabet}</td>
-                <td>${resturants[i].country}</td>
-                <td>${resturants[i].date}</td>
-                <td>$${resturants[i].resturant}</td>
-                <td><a class="deleteButton" onclick="deleteExpense(${expenses[i].id})">
+                <td>${venues[i].alphabet}</td>
+                <td>${venues[i].country}</td>
+                <td>${venues[i].date}</td>
+                <td>${venues[i].resturant}</td>
+                <td><a class="deleteButton" onclick="deleteVenue(${venues[i].id})">
                     Delete</td>
             </tr>
         `;
     }
 }
 
-const deleteRestruant = (id) => {
-    for(let i = 0; i < resturants.length; i++){
-        if(resturants[i].id == id){
-            resturants.splice(i, 1);
+const deleteVenue = (id) => {
+    for(let i = 0; i < venues.length; i++){
+        if(venues[i].id == id){
+            venues.splice(i, 1);
         }
     }
 
     // localStorage
-    localStorage.setItem('resturants', JSON.stringify(resturants));
-    showResturant();
+    localStorage.setItem('venues', JSON.stringify(venues));
+    showVenues();
 }
 
-showResturant();
+showVenues();
