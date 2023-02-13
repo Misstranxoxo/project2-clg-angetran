@@ -8,14 +8,28 @@
     <link href="https://fonts.googleapis.com/css?family=Titillium+Web&display=swap" 
         rel="stylesheet">
     <link rel="stylesheet" href="./css/Event.tracker.css">
+
+    <!-- toggle menu -->
+    <div class="wrapper active-element">
+        <header class="main-header">
+            <nav>
+                <div class="masthead active-element">
+             <div id="menu-toggle" class="menu-toggle active-element">
+                        <div class="one"></div>
+                        <div class="two"></div>
+                        <div class="three"></div>
+                    </div>
+                </div>
+                <div class="main-nav-list active-element">
+                    <ul>
+                        <li><a href="./Index.html">Home Page</a></li>
+                    </ul>
+                </div>
+            </nav>0
 </head>
 <body>
-    <header>
-        <h1 class="title">Resturant Tracker App</h1>
-    <header>
-
+    <!-- Event Tracker -->
     <section class="content">
-    <h3 <a href="./Index.html">Home Page</a></h3>
         <h3 class="secondTitle">Add a new entry: </h3>
         <div class="form">
             <form id="venueForm">
@@ -61,7 +75,7 @@
                     <input type="date" id="date">
                 </div>
                 <div class="formLine right">
-                    <span for="resturant">Resturant:</span>
+                    <span for="resturant">Resturant Name:</span>
                     <input type="text" id="resturant">
                 </div>
                 <button type="submit" class="buttonSave">Add a new resturant</button>
